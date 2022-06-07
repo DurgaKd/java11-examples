@@ -1,5 +1,9 @@
 pipeline{
     agent { label 'MASTER'}
+    triggers {
+        cron ('H * * * *')
+        poleSCM ('* * * * * ')
+    }
     stages {
         stage('scm') {
             steps {
