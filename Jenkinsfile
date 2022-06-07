@@ -2,7 +2,7 @@ pipeline{
     agent { label 'MASTER'}
     triggers {
         cron ('H * * * *')
-        poleSCM ('* * * * * ')
+        pollSCM ('* * * * * ')
     }
     stages {
         stage('scm') {
