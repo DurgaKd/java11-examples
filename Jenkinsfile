@@ -13,7 +13,7 @@ pipeline{
         }
     }
     post {
-        sucess {
+        success {
             archive '**/*.war'
             junit '**/TEST-*.xml'            
         }
