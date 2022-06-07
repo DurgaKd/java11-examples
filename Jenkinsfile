@@ -5,7 +5,7 @@ node('MASTER') {
     stage('build') {
         sh 'mvn package'
     }
-     stage('postbuild') {
+     stage('postbuild'){
         junit '**/TEST-*.xml'
         archive '**/*.jar'
     }
